@@ -1,0 +1,12 @@
+apiVersion: skaffold/v4beta8
+kind: Config
+metadata:
+  name: hello-crab
+build:
+  artifacts:
+    - image: hello-crab
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - skaffold/dev/deployment.yaml
